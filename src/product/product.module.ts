@@ -3,7 +3,9 @@ import { ProductService } from './product.service';
 import { ProductController } from './product.controller';
 
 @Module({
-  imports: [],
+  imports: [
+    // Import necessary modules here (ormModules, etc.)
+  ],
   controllers: [ProductController],
   providers: [ProductService],
 })
