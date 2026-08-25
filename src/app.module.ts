@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { ProductModule } from './product/product.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    // Import necessary modules here (ormModules, etc.)
-    ProductModule],
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+  ],
   controllers: [],
   providers: [],
 })
